@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">BookingAndr</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="view_pager_description">ViewPager for displaying multiple pages of content</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace ApiBookingApp.Controllers
+namespace ApiBookingApplication.Controllers
 {
     [ApiController]
     [Route("[controller]")]

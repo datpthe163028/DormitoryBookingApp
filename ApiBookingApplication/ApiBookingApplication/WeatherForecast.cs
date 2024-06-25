@@ -1,4 +1,4 @@
-namespace ApiBookingApp
+namespace ApiBookingApplication
 {
     public class WeatherForecast
     {

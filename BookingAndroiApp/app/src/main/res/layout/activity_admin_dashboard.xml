@@ -6,30 +6,28 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".HomeActivity">
-
+    tools:context=".AdminDashboardActivity">
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Booking"
+        android:text="Admin Page"
         android:textStyle="bold"
         android:textColor="#FFFFFF"
         android:background="#2F3B69"
         android:padding="16dp"
         android:textSize="18sp"
-
         android:gravity="center"
-    />
+        />
 
     <com.google.android.material.tabs.TabLayout
         android:background="#2F3B69"
         android:id="@+id/tabLayout"
-        app:tabMode="scrollable"
-        app:tabGravity="center"
         android:layout_width="match_parent"
         android:contentDescription="@string/view_pager_description"
         android:layout_height="wrap_content"
         app:tabTextColor="@color/white"
+        app:tabMode="scrollable"
+        app:tabGravity="center"
         app:tabSelectedTextColor="@color/design_default_color_error"
         />
     <androidx.viewpager.widget.ViewPager

@@ -5,8 +5,8 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
 
-public class ViewPagerAdapter extends FragmentStatePagerAdapter {
-    public ViewPagerAdapter(@NonNull FragmentManager fm, int behavior) {
+public class ViewPagerAdapterForAdmin extends FragmentStatePagerAdapter {
+    public ViewPagerAdapterForAdmin(@NonNull FragmentManager fm, int behavior) {
         super(fm, behavior);
     }
 
@@ -15,18 +15,16 @@ public class ViewPagerAdapter extends FragmentStatePagerAdapter {
     public Fragment getItem(int position) {
         switch (position){
             case 0:
-                return new RoomFragment();
+                return new DashBoardAdminFragment() ;
             case 1:
-                return new HistoryFragment();
+                return new CrudRoomFragment();
             case 2:
-                return new SwapRoomFragment();
+                return new CrudTypeRoomFragment();
             case 3:
-                return new NewsFragment();
-            case 4:
-                return new ProfileFragment();
+                return new CrudNewsFragment();
 
             default:
-                return new RoomFragment();
+                return new DashBoardAdminFragment();
         }
     }
 
@@ -34,15 +32,13 @@ public class ViewPagerAdapter extends FragmentStatePagerAdapter {
     public CharSequence getPageTitle(int position) {
         switch (position) {
             case 0:
-                return "Room";
+                return "Admin Dashboard";
             case 1:
-                return "History";
+                return "Manage Room";
             case 2:
-                return "Swap room";
+                return "Manage Type room";
             case 3:
-                return "News";
-            case 4:
-                return "Profile";
+                return "Manage News";
             default:
                 return null;
         }
@@ -50,6 +46,6 @@ public class ViewPagerAdapter extends FragmentStatePagerAdapter {
 
     @Override
     public int getCount() {
-        return 5;
+        return 4;
     }
 }

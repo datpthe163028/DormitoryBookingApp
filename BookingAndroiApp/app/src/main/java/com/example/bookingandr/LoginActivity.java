@@ -2,9 +2,11 @@ package com.example.bookingandr;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.content.Context;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -29,6 +31,10 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_login);
+
+
+
+
         Button loginBtn = findViewById(R.id.lgButton);
         loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -61,6 +67,12 @@ public class LoginActivity extends AppCompatActivity {
                                 public void onResponse(Call<LoginResponseModel> call, Response<LoginResponseModel> response) {
                                     LoginResponseModel model = response.body();
                                     if(model.status == 200){
+
+                                        SharedPreferences sharedPref = getSharedPreferences("Token", Context.MODE_PRIVATE);
+                                        SharedPreferences.Editor editor = sharedPref.edit();
+                                        editor.putString("accessToken", model.data.token);
+                                        editor.apply();
+
                                         if(model.data.role.equals("Admin")){
                                             Intent intent = new Intent(LoginActivity.this, AdminDashboardActivity.class);
                                             startActivity(intent);

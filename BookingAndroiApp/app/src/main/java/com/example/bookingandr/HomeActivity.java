@@ -1,7 +1,8 @@
 package com.example.bookingandr;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
-
+import android.content.Context;
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
@@ -31,6 +32,16 @@ public class HomeActivity extends AppCompatActivity {
         mviewPager.setAdapter(viewPagerAdapter);
 
         mTabLayout.setupWithViewPager(mviewPager);
+
+        SharedPreferences sharedPreferences = getSharedPreferences("Token", Context.MODE_PRIVATE);
+
+        // Lấy giá trị Token từ SharedPreferences
+        String token = sharedPreferences.getString("accessToken", null);
+        if (token != null) {
+            // Token đã được lưu trữ trước đó, xử lý logic ở đây
+        } else {
+            // Token chưa được lưu trữ
+        }
 
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {

@@ -3,8 +3,11 @@ package com.example.bookingandr;
 import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -60,13 +63,17 @@ public class ProfileFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_profile, container, false);
 
-        // Find the button in the layout
-        myButton = view.findViewById(R.id.button); // Replace 'my_button' with your Button's ID
 
-        // Set an OnClickListener to the button
-        myButton.setOnClickListener(new View.OnClickListener() {
+
+        return inflater.inflate(R.layout.fragment_profile, container, false);
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        Button b = view.findViewById(R.id.lgOut);
+        b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity(), LoginActivity.class);
@@ -74,7 +81,5 @@ public class ProfileFragment extends Fragment {
             }
         });
 
-
-        return inflater.inflate(R.layout.fragment_profile, container, false);
     }
 }

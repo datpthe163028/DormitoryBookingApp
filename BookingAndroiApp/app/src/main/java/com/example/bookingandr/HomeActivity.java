@@ -34,8 +34,6 @@ public class HomeActivity extends AppCompatActivity {
         mTabLayout.setupWithViewPager(mviewPager);
 
         SharedPreferences sharedPreferences = getSharedPreferences("Token", Context.MODE_PRIVATE);
-
-        // Lấy giá trị Token từ SharedPreferences
         String token = sharedPreferences.getString("accessToken", null);
         if (token != null) {
             // Token đã được lưu trữ trước đó, xử lý logic ở đây

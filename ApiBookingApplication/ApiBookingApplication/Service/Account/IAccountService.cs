@@ -9,7 +9,7 @@ namespace ApiBookingApplication.Service.Account
 {
     public interface IAccountService
     {
-        Task<(string accessToken, string errorMessage, string role)> AuthAsync(AccountLoginRequest accountAuthRequest);
+        Task<(string accessToken, string errorMessage, string role, string userId)> AuthAsync(AccountLoginRequest accountAuthRequest);
     }
 
     public class AccountService : IAccountService
@@ -25,21 +25,21 @@ namespace ApiBookingApplication.Service.Account
             _configuration = configuration;
         }
 
-        public async Task<(string accessToken, string errorMessage, string role)> AuthAsync(AccountLoginRequest accountAuthRequest)
+        public async Task<(string accessToken, string errorMessage, string role, string userId)> AuthAsync(AccountLoginRequest accountAuthRequest)
         {
             string accessToken = "";
             var ac = _context.Users.Include(s => s.Role).FirstOrDefault(s => s.Email == accountAuthRequest.email && s.Password == accountAuthRequest.password);
             if (ac is null)
             {
-                return ("", "Account not found", "");
+                return ("", "Account not found", "", "");
             }
 
             if (ac.Active is false)
             {
-                return ("", "Account doesn't active", "");
+                return ("", "Account doesn't active", "", "");
             }
 
-            return (await GenerateJwtTokenTw(ac), "", ac.Role.Name);
+            return (await GenerateJwtTokenTw(ac), "", ac.Role.Name, ac.Id + "");
 
         }
 

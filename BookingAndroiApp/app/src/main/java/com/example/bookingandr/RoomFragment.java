@@ -1,12 +1,33 @@
 package com.example.bookingandr;
 
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.TextView;
+
+import java.util.List;
+
+import Adapter.RoomTypeAdapter;
+import Api.ApiClient;
+import model.GetListTypeRoomResponseModel;
+import model.LoginRequestModel;
+import model.LoginResponseModel;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -58,7 +79,52 @@ public class RoomFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_room, container, false);
     }
+    RecyclerView recyclerView;
+    RoomTypeAdapter roomTypeAdapter;
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+
+
+        ApiClient apiClient = new ApiClient();
+        apiClient.getApiService().GetListTypeRoom().enqueue(new Callback<List<GetListTypeRoomResponseModel>>() {
+            @Override
+            public void onResponse(Call<List<GetListTypeRoomResponseModel>> call, Response<List<GetListTypeRoomResponseModel>> response) {
+                List<GetListTypeRoomResponseModel> model = response.body();
+
+                Log.e("kkkkkkkkkkkk", "b");
+
+                for (GetListTypeRoomResponseModel item : model) {
+                    Log.e("kkkkkkkkkkkk", item.imageUrl);
+                }
+                Log.e("kkkkkkkkkkkk", "dat");
+                recyclerView = view.findViewById(R.id.recyclerRoomType);
+                recyclerView.setHasFixedSize(true);
+                recyclerView.setLayoutManager(new GridLayoutManager(getContext(), 1));
+                roomTypeAdapter = new RoomTypeAdapter(getContext(), model);
+                recyclerView.setAdapter(roomTypeAdapter);
+
+
+
+            }
+
+            @Override
+            public void onFailure(Call<List<GetListTypeRoomResponseModel>> call, Throwable throwable) {
+                Log.e("kkkkkkkkkkkk", throwable.getMessage());
+            }
+        });
+
+        Button temp = view.findViewById(R.id.testdat);
+        temp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), RentRoomActivity.class);
+                startActivity(intent);
+            }
+        });
+
+    }
+
+
 }

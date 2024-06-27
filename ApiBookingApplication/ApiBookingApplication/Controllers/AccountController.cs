@@ -20,12 +20,12 @@ namespace ApiBookingApplication.Controllers
         [HttpPost("Auth")]
         public async Task<IActionResult> Login([FromBody] AccountLoginRequest account)
         {
-            (string accessToken, string errorMessage, string role) = await _accountService.AuthAsync(account);
+            (string accessToken, string errorMessage, string role, string userId) = await _accountService.AuthAsync(account);
             if (!string.IsNullOrEmpty(errorMessage))
             {
                 return Ok(new ResponseBaseModel() { Data = null, Message = errorMessage, Status = 400 });
             }
-            return Ok(new ResponseBaseModel() { Data = new {token = accessToken, role = role}, Message = "Success", Status = 200} );
+            return Ok(new ResponseBaseModel() { Data = new {token = accessToken, role = role, userId = userId }, Message = "Success", Status = 200} );
         }
 
     }

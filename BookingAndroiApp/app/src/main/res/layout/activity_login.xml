@@ -35,27 +35,27 @@
         android:layout_width="339dp"
         android:layout_height="48dp"
         android:layout_marginTop="32dp"
+        android:background="@color/white"
         android:ems="10"
         android:hint="Email"
         android:inputType="text"
-        android:background="@color/white"
-        android:text=""
         android:padding="8dp"
+        android:text=""
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
     <EditText
-        android:background="@color/white"
         android:id="@+id/passwordText"
         android:layout_width="339dp"
         android:layout_height="48dp"
         android:layout_marginTop="30dp"
+        android:background="@color/white"
         android:ems="10"
-        android:padding="8dp"
         android:hint="Password"
         android:inputType="text"
+        android:padding="8dp"
         android:text=""
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -81,5 +81,17 @@
         android:textColor="#EB1010"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/emailText" />
+
+    <TextView
+        android:id="@+id/regis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="245dp"
+        android:text="Register new account"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lgButton" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

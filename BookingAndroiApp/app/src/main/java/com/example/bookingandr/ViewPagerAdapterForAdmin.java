@@ -22,6 +22,8 @@ public class ViewPagerAdapterForAdmin extends FragmentStatePagerAdapter {
                 return new CrudTypeRoomFragment();
             case 3:
                 return new CrudNewsFragment();
+            case 4:
+                return new ProfileFragment();
 
             default:
                 return new DashBoardAdminFragment();
@@ -39,6 +41,8 @@ public class ViewPagerAdapterForAdmin extends FragmentStatePagerAdapter {
                 return "Manage Type room";
             case 3:
                 return "Manage News";
+            case 4:
+                return "Profile";
             default:
                 return null;
         }
@@ -46,6 +50,6 @@ public class ViewPagerAdapterForAdmin extends FragmentStatePagerAdapter {
 
     @Override
     public int getCount() {
-        return 4;
+        return 5;
     }
 }

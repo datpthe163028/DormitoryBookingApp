@@ -1,6 +1,8 @@
 package com.example.bookingandr;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -12,6 +14,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -71,11 +74,20 @@ public class ProfileFragment extends Fragment {
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+
+        SharedPreferences sharedPref = getActivity().getSharedPreferences("UserInformation", Context.MODE_PRIVATE);
+        String userId = sharedPref.getString("UserId", null);
+        TextView u = view.findViewById(R.id. textView);
+        u.setText("UserId: " + userId);
         super.onViewCreated(view, savedInstanceState);
         Button b = view.findViewById(R.id.lgOut);
         b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                SharedPreferences.Editor editor = sharedPref.edit();
+                editor.clear();
+                editor.apply();
+
                 Intent intent = new Intent(getActivity(), LoginActivity.class);
                 startActivity(intent);
             }

@@ -32,7 +32,31 @@ public class LoginActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_login);
 
+        SharedPreferences sharedPreferences = getSharedPreferences("UserInformation", Context.MODE_PRIVATE);
+        String userId = sharedPreferences.getString("UserId", null);
 
+        if(userId != null && !userId.isEmpty()){
+            String role = sharedPreferences.getString("Role", null);
+
+            if(role.equals("Admin")){
+                Intent intent = new Intent(LoginActivity.this, AdminDashboardActivity.class);
+                startActivity(intent);
+                finish();
+            }else{
+                Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        }
+
+        TextView register = findViewById(R.id.regis);
+        register.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
+                startActivity(intent);
+            }
+        });
 
 
         Button loginBtn = findViewById(R.id.lgButton);
@@ -68,8 +92,11 @@ public class LoginActivity extends AppCompatActivity {
                                     LoginResponseModel model = response.body();
                                     if(model.status == 200){
 
-                                        SharedPreferences sharedPref = getSharedPreferences("Token", Context.MODE_PRIVATE);
+
+                                        SharedPreferences sharedPref = getSharedPreferences("UserInformation", Context.MODE_PRIVATE);
                                         SharedPreferences.Editor editor = sharedPref.edit();
+                                        editor.putString("UserId", model.data.userId);
+                                        editor.putString("Role", model.data.role);
                                         editor.putString("accessToken", model.data.token);
                                         editor.apply();
 
@@ -94,6 +121,7 @@ public class LoginActivity extends AppCompatActivity {
                 }
             }
         });
+
 
 
 

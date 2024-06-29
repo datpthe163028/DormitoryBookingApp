@@ -1,3 +1,4 @@
+using ApiBookingApplication.Mapper;
 using ApiBookingApplication.Model;
 using ApiBookingApplication.Service.Account;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -52,6 +53,7 @@ builder.Services.AddAuthentication(options =>
     };
 });
 builder.Services.AddTransient<IAccountService, AccountService>();
+builder.Services.AddAutoMapper(typeof(MappingProfile));
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

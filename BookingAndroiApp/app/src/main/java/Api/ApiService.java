@@ -16,5 +16,7 @@ public interface ApiService {
     Call<LoginResponseModel> loginUser(@Body LoginRequestModel loginRequest);
 
     @GET("api/TypeRoom")
-    Call<List<GetListTypeRoomResponseModel>> GetListTypeRoom();
+    Call<List<GetListTypeRoomResponseModel>> GetListTypeRoom(); 
+
+
 }

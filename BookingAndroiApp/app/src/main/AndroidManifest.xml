@@ -21,11 +21,7 @@
         <activity
             android:name=".RentRoomActivity"
             android:exported="false" />
-        <activity
-            android:name=".MainActivity2"
-            android:exported="false"
-            android:label="@string/title_activity_main2"
-            android:theme="@style/Theme.BookingAndr" />
+
         <activity
             android:name=".AdminDashboardActivity"
             android:exported="false" />
@@ -37,6 +33,9 @@
             android:exported="false"
             android:label="@string/title_activity_home"
             android:theme="@style/Theme.BookingAndr" />
+        <activity android:name=".AddTypeRoomActivity"></activity>
+        <activity android:name=".ViewTypeRoomActivity"></activity>
+        <activity android:name=".EditTypeRoomActivity"></activity>
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -47,5 +46,8 @@
             </intent-filter>
         </activity>
     </application>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
 </manifest>

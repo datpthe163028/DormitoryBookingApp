@@ -34,10 +34,7 @@ namespace ApiBookingApplication.Service.Account
                 return ("", "Account not found", "", "");
             }
 
-            if (ac.Active is false)
-            {
-                return ("", "Account doesn't active", "", "");
-            }
+          
 
             return (await GenerateJwtTokenTw(ac), "", ac.Role.Name, ac.Id + "");
 

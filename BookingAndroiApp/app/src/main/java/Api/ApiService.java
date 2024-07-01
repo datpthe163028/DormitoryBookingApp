@@ -13,6 +13,7 @@ import model.ResponseGetListRoom2Model;
 import model.RoomTypePostModel;
 import okhttp3.MultipartBody;
 import okhttp3.RequestBody;
+import model.NewsModel;
 import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.DELETE;
@@ -70,5 +71,21 @@ public interface ApiService {
     Call<Void> deleteRoomType(@Path("id") int id);
     @GET("api/TypeRoom/{id}")
     Call<GetListTypeRoomResponseModel> getRoomTypeById(@Path("id") int id);
+
+    @GET("api/News")
+    Call<List<NewsModel>> getNews();
+
+    @GET("api/News/{id}")
+    Call<NewsModel> getNews(@Path("id") int id);
+
+    @POST("api/News")
+    Call<NewsModel> addNews(@Body NewsModel newsModel);
+
+    @PUT("api/News/{id}")
+    Call<Void> updateNews(@Path("id") int id, @Body NewsModel newsModel);
+
+    @DELETE("api/News/{id}")
+    Call<Void> deleteNews(@Path("id") int id);
+
 }
 

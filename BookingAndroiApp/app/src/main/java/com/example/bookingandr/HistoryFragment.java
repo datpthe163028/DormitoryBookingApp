@@ -66,7 +66,6 @@ public class HistoryFragment extends Fragment {
         recyclerView = view.findViewById(R.id.recyclerBookingHistory);
         recyclerView.setHasFixedSize(true);
        recyclerView.setLayoutManager(new GridLayoutManager(getContext(), 1));
-        Log.e("duong", "123");
         ApiClient apiClient = new ApiClient();
         apiClient.getApiService().getBookingHistoryByUserId(Integer.parseInt(userId)).enqueue(new Callback<List<BookingHistoryModel>>() {
             @Override
@@ -82,7 +81,7 @@ public class HistoryFragment extends Fragment {
 
             @Override
             public void onFailure(Call<List<BookingHistoryModel>> call, Throwable throwable) {
-                Log.e("duong", throwable.getMessage());
+                Log.e("duong", "loi j vay");
             }
         });
 

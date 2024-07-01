@@ -18,6 +18,7 @@ namespace ApiBookingApplication.Mapper
                     .ForMember(dest => dest.SemesterStartDate, opt => opt.MapFrom(src => src.Semester.DateStart))
                     .ForMember(dest => dest.SemesterEndDate, opt => opt.MapFrom(src => src.Semester.DateEnd))
                     .ForMember(dest => dest.BuildingName, opt => opt.MapFrom(src => src.Room.Building.Name));
+            CreateMap<News, NewsDTO>().ReverseMap();
         }
     }
 }

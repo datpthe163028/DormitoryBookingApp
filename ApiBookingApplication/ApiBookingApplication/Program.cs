@@ -2,6 +2,8 @@ using ApiBookingApplication.Controllers;
 using ApiBookingApplication.Mapper;
 using ApiBookingApplication.Model;
 using ApiBookingApplication.Service.Account;
+using ApiBookingApplication.Service.Admin.CRUDRoom;
+using ApiBookingApplication.Service.Admin.Dashboard;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
@@ -54,6 +56,8 @@ builder.Services.AddAuthentication(options =>
     };
 });
 builder.Services.AddTransient<IAccountService, AccountService>();
+builder.Services.AddTransient<IDashboardService, DashboardService>();
+builder.Services.AddTransient<IRoomService, RoomService>();
 builder.Services.AddAutoMapper(typeof(MappingProfile));
 builder.Services.Configure<CloudinarySettings>(builder.Configuration.GetSection("CloudinarySettings"));
 var app = builder.Build();

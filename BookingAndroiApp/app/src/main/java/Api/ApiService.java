@@ -4,6 +4,7 @@ import java.util.List;
 
 import model.BookingHistoryModel;
 import model.BookingRoomResponseModel;
+import model.DashboardResponseModel;
 import model.GetListBuilding2ResponseModel;
 import model.GetListTypeRoomResponseModel;
 import model.GetStatusCModel;
@@ -87,5 +88,7 @@ public interface ApiService {
     @DELETE("api/News/{id}")
     Call<Void> deleteNews(@Path("id") int id);
 
+    @GET("api/Dashboard/GetDashboard")
+    Call<DashboardResponseModel> getDashboard();
 }
 

@@ -5,12 +5,6 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".RoomFragment" >
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Đặt phòng"
-        android:id="@+id/testdat">
-    </Button>
     <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerRoomType"
         android:layout_width="match_parent"

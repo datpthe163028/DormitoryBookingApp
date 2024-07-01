@@ -1,8 +1,10 @@
 package Adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
@@ -10,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.bookingandr.R;
+import com.example.bookingandr.RentRoomActivity;
 
 import java.util.List;
 
@@ -39,12 +42,20 @@ public class RoomTypeAdapter extends RecyclerView.Adapter<RoomTypeAdapterHolder>
                 .into(holder.t2);
 
         holder.t3.setId(list.get(position).getId());
-
+        int d = holder.t3.getId();
+        holder.t3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int buttonId = v.getId();
+                Intent intent = new Intent(context, RentRoomActivity.class);
+                intent.putExtra("ROOM_ID", buttonId);
+                context.startActivity(intent);
+            }
+        });
     }
 
     @Override
     public int getItemCount() {
-        Log.e("síaaa", list.size() + "");
         return list.size();
     }
 }

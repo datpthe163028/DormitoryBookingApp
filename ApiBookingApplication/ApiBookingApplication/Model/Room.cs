@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text.Json.Serialization;
 
 namespace ApiBookingApplication.Model
 {
@@ -18,10 +19,13 @@ namespace ApiBookingApplication.Model
         public int? TypeId { get; set; }
         public int? BuildingId { get; set; }
         public int? Floor { get; set; }
-
+        [JsonIgnore]
         public virtual Building? Building { get; set; }
+        [JsonIgnore]
         public virtual RoomType? Type { get; set; }
+        [JsonIgnore]
         public virtual ICollection<Booking> Bookings { get; set; }
+        [JsonIgnore]
         public virtual ICollection<User> Users { get; set; }
     }
 }

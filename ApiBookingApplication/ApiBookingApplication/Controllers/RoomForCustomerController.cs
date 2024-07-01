@@ -54,12 +54,12 @@ namespace ApiBookingApplication.Controllers
 
 
                 var u = ct.Users.FirstOrDefault(c => c.Id == soNguyen1);
-                var r = ct.Rooms.Include(c => c.Type).FirstOrDefault(c => c.Id == soNguyen2);
+                var r = ct.Rooms.Include(c => c.Type).Include(c => c.Building).FirstOrDefault(c => c.Id == soNguyen2);
 
                 if (u == null || r == null)
                     return BadRequest();
 
-                r.CurrentPeople = r.CurrentPeople++;
+                r.CurrentPeople = r.CurrentPeople + 1;
                 if (r.Type.Capacity == r.CurrentPeople)
                     r.IsAvailble = false;
 
@@ -76,10 +76,11 @@ namespace ApiBookingApplication.Controllers
                     }
                 }
                 u.Balance = u.Balance - r.Type.Price;
-
+                ct.Rooms.Update(r);
+                ct.Users.Update(u);
                 ct.SaveChanges();
 
-                return Ok(new { status = "success" });
+                return Ok(new { status = "success", roomName = r.Name, buildingName = r.Building.Name });
 
             }
             catch (Exception)
@@ -98,7 +99,7 @@ namespace ApiBookingApplication.Controllers
 
                 if (u.CurrentRoomId == null)
                 {
-                    return BadRequest();
+                    return Ok(new { status = "false", roomName = "", buildingName = "" });
                 }
                 else
                 {

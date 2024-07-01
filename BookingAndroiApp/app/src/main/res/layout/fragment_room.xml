@@ -4,10 +4,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".RoomFragment" >
+    tools:context=".RoomFragment">
+
     <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerRoomType"
+        android:id="@+id/recyclerRoomType"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent" />
 
 </LinearLayout>

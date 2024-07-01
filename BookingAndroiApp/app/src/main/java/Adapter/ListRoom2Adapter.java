@@ -1,5 +1,6 @@
 package Adapter;
 
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -14,6 +15,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.example.bookingandr.CurrentRoom2Activity;
 import com.example.bookingandr.R;
 import com.example.bookingandr.RentRoomActivity;
 
@@ -87,7 +89,14 @@ public class ListRoom2Adapter extends RecyclerView.Adapter<ListRoom2AdapterHolde
                                         apiClient.getApiService().BookingRoom( userId , holder.button1.getId() + "").enqueue(new Callback<BookingRoomResponseModel>() {
                                             @Override
                                             public void onResponse(Call<BookingRoomResponseModel> call, Response<BookingRoomResponseModel> response) {
-
+                                                BookingRoomResponseModel model = response.body();
+                                                if(model.status.equals("success")){
+                                                    Intent intent = new Intent(context, CurrentRoom2Activity.class);
+                                                    intent.putExtra("ROOM", model.roomName);
+                                                    intent.putExtra("BUILDING", model.buildingName);
+                                                    context.startActivity(intent);
+                                                    ((Activity) context).finish();
+                                                }
                                             }
 
                                             @Override

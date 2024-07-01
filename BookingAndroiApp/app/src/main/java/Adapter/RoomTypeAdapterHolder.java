@@ -12,6 +12,7 @@ import com.example.bookingandr.R;
 
 public class RoomTypeAdapterHolder extends RecyclerView.ViewHolder {
     public TextView t1;
+    public TextView t4;
     public ImageView t2;
     public Button t3;
     public RoomTypeAdapterHolder(@NonNull View itemView) {
@@ -19,5 +20,6 @@ public class RoomTypeAdapterHolder extends RecyclerView.ViewHolder {
         t1 = itemView.findViewById(R.id.dat123);
         t2 = itemView.findViewById(R.id.imageViewDat);
         t3 = itemView.findViewById(R.id.buttonDat);
+        t4 = itemView.findViewById(R.id.dat12378);
     }
 }

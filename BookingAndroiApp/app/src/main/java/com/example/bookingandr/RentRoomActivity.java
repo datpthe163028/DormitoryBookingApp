@@ -37,29 +37,19 @@ import retrofit2.Response;
 public class RentRoomActivity extends AppCompatActivity {
 
     private Spinner spinnerBuildings;
-    ApiClient apiClient = new ApiClient();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        ApiClient apiClient = new ApiClient();
         SharedPreferences sharedPref = this.getSharedPreferences("UserInformation", Context.MODE_PRIVATE);
         String userId = sharedPref.getString("UserId", null);
-        ApiClient apiClient = new ApiClient();
-        apiClient.getApiService().GetCurrentRoom(userId).enqueue(new Callback<BookingRoomResponseModel>() {
-            @Override
-            public void onResponse(Call<BookingRoomResponseModel> call, Response<BookingRoomResponseModel> response) {
-                BookingRoomResponseModel model = response.body();
-                Intent intent = new Intent(RentRoomActivity.this, CurrentRoom2Activity.class);
-                intent.putExtra("ROOM", model.roomName);
-                intent.putExtra("BUILDING", model.buildingName);
-                startActivity(intent);
-                finish();
-            }
 
-            @Override
-            public void onFailure(Call<BookingRoomResponseModel> call, Throwable throwable) {
+
 
                 int roomId = getIntent().getIntExtra("ROOM_ID", -1);
-                apiClient.getApiService().GetListBuilding2().enqueue(new Callback<List<GetListBuilding2ResponseModel>>() {
+                ApiClient apiClient2 = new ApiClient();
+                apiClient2.getApiService().GetListBuilding2().enqueue(new Callback<List<GetListBuilding2ResponseModel>>() {
                     @Override
                     public void onResponse(Call<List<GetListBuilding2ResponseModel>> call, Response<List<GetListBuilding2ResponseModel>> response) {
                         List<GetListBuilding2ResponseModel> model = response.body();
@@ -74,8 +64,6 @@ public class RentRoomActivity extends AppCompatActivity {
                         Log.e("123123213213", throwable.getMessage());
                     }
                 });
-            }
-        }) ;
 
 
         super.onCreate(savedInstanceState);
@@ -101,7 +89,7 @@ public class RentRoomActivity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 String selectedItem = (String) parent.getItemAtPosition(position);
                 Log.e("Selected Item", selectedItem);
-
+                ApiClient apiClient = new ApiClient();
                 apiClient.getApiService().getRoomsForCustomer(roomId, selectedItem).enqueue(new Callback<ResponseGetListRoom2Model>() {
                     @Override
                     public void onResponse(Call<ResponseGetListRoom2Model> call, Response<ResponseGetListRoom2Model> response) {

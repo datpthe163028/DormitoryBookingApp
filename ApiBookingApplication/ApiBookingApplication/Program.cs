@@ -1,3 +1,4 @@
+using ApiBookingApplication.Controllers;
 using ApiBookingApplication.Mapper;
 using ApiBookingApplication.Model;
 using ApiBookingApplication.Service.Account;
@@ -54,6 +55,7 @@ builder.Services.AddAuthentication(options =>
 });
 builder.Services.AddTransient<IAccountService, AccountService>();
 builder.Services.AddAutoMapper(typeof(MappingProfile));
+builder.Services.Configure<CloudinarySettings>(builder.Configuration.GetSection("CloudinarySettings"));
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

@@ -153,6 +153,7 @@ public class OTPActivity extends AppCompatActivity
                         if(model.status == 200)
                         {
                             Intent intent = new Intent(OTPActivity.this, LoginActivity.class);
+                            intent.putExtra("Notif", "Register Successfully");
                             startActivity(intent);
                         }
                         else

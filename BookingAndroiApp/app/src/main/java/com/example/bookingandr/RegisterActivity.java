@@ -75,7 +75,6 @@ public class RegisterActivity extends AppCompatActivity
                 EditText password = findViewById(R.id.passwordText);
                 EditText studentID = findViewById(R.id.StudentIDText);
                 EditText phone = findViewById(R.id.PhoneText);
-                EditText dob = findViewById(R.id.DOBText);
                 RadioGroup gender = findViewById(R.id.genderRadioGroup);
 
                 emailBuffer = email.getText().toString();
@@ -100,22 +99,6 @@ public class RegisterActivity extends AppCompatActivity
                     check = 1;
                     emailError.setText("Enter phone");
                 }
-
-                dobInput = dob.getText().toString();
-
-
-                SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
-                try {
-                    DobBuffer = dateFormat.parse(dobInput);
-                    if (!dobInput.equals(dateFormat.format(DobBuffer))) {
-                        check = 1;
-                        emailError.setText("Enter date of birth in format dd/MM/yyyy");
-                    }
-                } catch (ParseException e) {
-                    check = 1;
-                    emailError.setText("Enter date of birth in format dd/MM/yyyy");
-                }
-
 
                 if(check == 0)
                 {

@@ -26,11 +26,20 @@ import retrofit2.Response;
 
 public class LoginActivity extends AppCompatActivity {
 
+    public String notif;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_login);
+
+        // Retrieve the values passed from RegisterActivity
+        Intent getintent = getIntent();
+        if (getintent != null) {
+            TextView NotifText = findViewById(R.id.er);
+            notif = getintent.getStringExtra("Notif");
+            NotifText.setText(notif);
+        }
 
         SharedPreferences sharedPreferences = getSharedPreferences("UserInformation", Context.MODE_PRIVATE);
         String userId = sharedPreferences.getString("UserId", null);

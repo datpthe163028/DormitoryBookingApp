@@ -61,20 +61,6 @@
         app:layout_constraintTop_toBottomOf="@+id/passwordText" />
 
     <EditText
-        android:id="@+id/DOBText"
-        android:layout_width="339dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="24dp"
-        android:background="@color/white"
-        android:ems="10"
-        android:hint="Date of Birth"
-        android:inputType="date"
-        android:padding="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/StudentIDText" />
-
-    <EditText
         android:id="@+id/PhoneText"
         android:layout_width="339dp"
         android:layout_height="48dp"
@@ -86,7 +72,7 @@
         android:padding="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/DOBText" />
+        app:layout_constraintTop_toBottomOf="@+id/StudentIDText" />
 
     <Button
         android:id="@+id/registerBtn"

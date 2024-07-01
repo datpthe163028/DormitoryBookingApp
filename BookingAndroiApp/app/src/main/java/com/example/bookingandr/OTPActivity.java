@@ -68,22 +68,6 @@ public class OTPActivity extends AppCompatActivity
             phoneBuffer = intent.getStringExtra("Phone");
             hiddenOTP = intent.getStringExtra("hiddenOTP");
 
-
-            // Convert dobString to Date
-            dobString = intent.getStringExtra("DOB");
-
-
-            // Convert dobString to Date
-            SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
-            try {
-                dobBuffer = dateFormat.parse(dobString);
-            } catch (ParseException e)
-            {
-                TextView OTPDev = findViewById(R.id.er);
-                OTPDev.setText(e.toString());
-            }
-
-
             // Convert genderString to boolean
             String genderString = intent.getStringExtra("Gender");
             genderBuffer = Boolean.parseBoolean(genderString);
@@ -153,7 +137,6 @@ public class OTPActivity extends AppCompatActivity
                         if(model.status == 200)
                         {
                             Intent intent = new Intent(OTPActivity.this, LoginActivity.class);
-                            intent.putExtra("Notif", "Register Successfully");
                             startActivity(intent);
                         }
                         else

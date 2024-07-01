@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2F3B69"
+    tools:context=".RegisterActivity">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="171dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo" />
+
+    <EditText
+        android:id="@+id/emailText"
+        android:layout_width="339dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="56dp"
+        android:background="@color/white"
+        android:ems="10"
+        android:hint="Email"
+        android:inputType="text"
+        android:padding="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <EditText
+        android:id="@+id/passwordText"
+        android:layout_width="339dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="24dp"
+        android:background="@color/white"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="text"
+        android:padding="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emailText" />
+
+    <EditText
+        android:id="@+id/StudentIDText"
+        android:layout_width="339dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="24dp"
+        android:background="@color/white"
+        android:ems="10"
+        android:hint="Student ID"
+        android:inputType="text"
+        android:padding="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/passwordText" />
+
+    <EditText
+        android:id="@+id/DOBText"
+        android:layout_width="339dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="24dp"
+        android:background="@color/white"
+        android:ems="10"
+        android:hint="Date of Birth"
+        android:inputType="date"
+        android:padding="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/StudentIDText" />
+
+    <EditText
+        android:id="@+id/PhoneText"
+        android:layout_width="339dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="24dp"
+        android:background="@color/white"
+        android:ems="10"
+        android:hint="Phone Number"
+        android:inputType="phone"
+        android:padding="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/DOBText" />
+
+    <Button
+        android:id="@+id/registerBtn"
+        android:layout_width="320dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="24dp"
+        android:text="Register"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.541"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/genderRadioGroup" />
+
+    <RadioGroup
+        android:id="@+id/genderRadioGroup"
+        android:layout_width="337dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.486"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PhoneText">
+
+        <RadioButton
+            android:id="@+id/maleRadioButton"
+            android:layout_width="159dp"
+            android:layout_height="47dp"
+            android:layout_marginTop="12dp"
+            android:buttonTint="@color/white"
+            android:text="Male"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toBottomOf="@+id/PhoneText"
+            tools:layout_editor_absoluteX="36dp" />
+
+        <RadioButton
+            android:id="@+id/femaleRadioButton"
+            android:layout_width="166dp"
+            android:layout_height="46dp"
+            android:layout_marginTop="12dp"
+            android:buttonTint="@color/white"
+            android:text="Female"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toBottomOf="@+id/PhoneText"
+            tools:layout_editor_absoluteX="206dp" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/er"
+        android:layout_width="336dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="8dp"
+        android:text="Notif: "
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        tools:layout_editor_absoluteX="38dp" /> <!-- Set text color to white -->
+    android:textAlignment="center"
+    android:gravity="center" <!-- Center text horizontally and vertically -->
+    app:layout_constraintTop_toBottomOf="@+id/imageView2"
+    app:layout_constraintStart_toStartOf="parent" <!-- Align to the start (left) of the parent -->
+    app:layout_constraintEnd_toEndOf="parent" <!-- Align to the end (right) of the parent -->
+    app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

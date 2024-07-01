@@ -22,6 +22,7 @@ import java.util.List;
 
 import Adapter.RoomTypeAdapter;
 import Api.ApiClient;
+import model.GetCurrenRoomModel;
 import model.GetListTypeRoomResponseModel;
 import model.LoginRequestModel;
 import model.LoginResponseModel;
@@ -86,8 +87,10 @@ public class RoomFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
 
-
         ApiClient apiClient = new ApiClient();
+
+
+
         apiClient.getApiService().GetListTypeRoom().enqueue(new Callback<List<GetListTypeRoomResponseModel>>() {
             @Override
             public void onResponse(Call<List<GetListTypeRoomResponseModel>> call, Response<List<GetListTypeRoomResponseModel>> response) {
@@ -96,17 +99,15 @@ public class RoomFragment extends Fragment {
                 Log.e("kkkkkkkkkkkk", "b");
 
                 for (GetListTypeRoomResponseModel item : model) {
-                    Log.e("kkkkkkkkkkkk", item.imageUrl);
+
                 }
                 Log.e("kkkkkkkkkkkk", "dat");
+
                 recyclerView = view.findViewById(R.id.recyclerRoomType);
                 recyclerView.setHasFixedSize(true);
                 recyclerView.setLayoutManager(new GridLayoutManager(getContext(), 1));
                 roomTypeAdapter = new RoomTypeAdapter(getContext(), model);
                 recyclerView.setAdapter(roomTypeAdapter);
-
-
-
             }
 
             @Override
@@ -115,16 +116,7 @@ public class RoomFragment extends Fragment {
             }
         });
 
-        Button temp = view.findViewById(R.id.testdat);
-        temp.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), RentRoomActivity.class);
-                startActivity(intent);
-            }
-        });
+
 
     }
-
-
 }

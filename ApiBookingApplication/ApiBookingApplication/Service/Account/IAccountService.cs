@@ -34,8 +34,6 @@ namespace ApiBookingApplication.Service.Account
                 return ("", "Account not found", "", "");
             }
 
-          
-
             return (await GenerateJwtTokenTw(ac), "", ac.Role.Name, ac.Id + "");
 
         }

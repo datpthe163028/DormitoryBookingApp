@@ -67,8 +67,6 @@ public class ProfileFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-
-
         return inflater.inflate(R.layout.fragment_profile, container, false);
     }
 
@@ -78,7 +76,6 @@ public class ProfileFragment extends Fragment {
         SharedPreferences sharedPref = getActivity().getSharedPreferences("UserInformation", Context.MODE_PRIVATE);
         String userId = sharedPref.getString("UserId", null);
         TextView u = view.findViewById(R.id. textView);
-        u.setText("UserId: " + userId);
         super.onViewCreated(view, savedInstanceState);
         Button b = view.findViewById(R.id.lgOut);
         b.setOnClickListener(new View.OnClickListener() {
@@ -92,6 +89,5 @@ public class ProfileFragment extends Fragment {
                 startActivity(intent);
             }
         });
-
     }
 }

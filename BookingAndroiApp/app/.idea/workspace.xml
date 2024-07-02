@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e3191315-3d2c-456e-90cd-a7ad9a9e6997" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../../.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ApiBookingApplication/ApiBookingApplication.sln" beforeDir="false" afterPath="$PROJECT_DIR$/../../ApiBookingApplication/ApiBookingApplication.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ApiBookingApplication/ApiBookingApplication/ApiBookingApplication.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/../../ApiBookingApplication/ApiBookingApplication/ApiBookingApplication.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ApiBookingApplication/ApiBookingApplication/Common/ResponseBaseModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../ApiBookingApplication/ApiBookingApplication/Common/ResponseBaseModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ApiBookingApplication/ApiBookingApplication/Controllers/AccountController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../ApiBookingApplication/ApiBookingApplication/Controllers/AccountController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ApiBookingApplication/ApiBookingApplication/Controllers/Admin/CRUDRoom/RoomController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../ApiBookingApplication/ApiBookingApplication/Controllers/Admin/CRUDRoom/RoomController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ApiBookingApplication/ApiBookingApplication/Controllers/Admin/CRUDRoom/RoomDTO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../ApiBookingApplication/ApiBookingApplication/Controllers/Admin/CRUDRoom/RoomDTO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ApiBookingApplication/ApiBookingApplication/Controllers/Admin/Dashboard/DashboardController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../ApiBookingApplication/ApiBookingApplication/Controllers/Admin/Dashboard/DashboardController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ApiBookingApplication/ApiBookingApplication/Controllers/BookingHistoryController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../ApiBookingApplication/ApiBookingApplication/Controllers/BookingHistoryController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ApiBookingApplication/ApiBookingApplication/Controllers/NewsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../ApiBookingApplication/ApiBookingApplication/Controllers/NewsController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ApiBookingApplication/ApiBookingApplication/Controllers/RoomForCustomerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../ApiBookingApplication/ApiBookingApplication/Controllers/RoomForCustomerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ApiBookingApplication/ApiBookingApplication/Controllers/TypeRoomController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../ApiBookingApplication/ApiBookingApplication/Controllers/TypeRoomController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ApiBookingApplication/ApiBookingApplication/DTOs/BookingHistoryDTO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../ApiBookingApplication/ApiBookingApplication/DTOs/BookingHistoryDTO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ApiBookingApplication/ApiBookingApplication/DTOs/NewsDTO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../ApiBookingApplication/ApiBookingApplication/DTOs/NewsDTO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ApiBookingApplication/ApiBookingApplication/Mapper/MappingProfile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../ApiBookingApplication/ApiBookingApplication/Mapper/MappingProfile.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ApiBookingApplication/ApiBookingApplication/Model/Booking.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../ApiBookingApplication/ApiBookingApplication/Model/Booking.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ApiBookingApplication/ApiBookingApplication/Model/Building.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../ApiBookingApplication/ApiBookingApplication/Model/Building.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ApiBookingApplication/ApiBookingApplication/Model/DormitoryBookingContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../ApiBookingApplication/ApiBookingApplication/Model/DormitoryBookingContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ApiBookingApplication/ApiBookingApplication/Model/IncomingRequest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../ApiBookingApplication/ApiBookingApplication/Model/IncomingRequest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ApiBookingApplication/ApiBookingApplication/Model/News.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../ApiBookingApplication/ApiBookingApplication/Model/News.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ApiBookingApplication/ApiBookingApplication/Model/Role.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../ApiBookingApplication/ApiBookingApplication/Model/Role.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ApiBookingApplication/ApiBookingApplication/Model/Room.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../ApiBookingApplication/ApiBookingApplication/Model/Room.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ApiBookingApplication/ApiBookingApplication/Model/RoomType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../ApiBookingApplication/ApiBookingApplication/Model/RoomType.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ApiBookingApplication/ApiBookingApplication/Model/Semester.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../ApiBookingApplication/ApiBookingApplication/Model/Semester.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ApiBookingApplication/ApiBookingApplication/Model/SwapHistory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../ApiBookingApplication/ApiBookingApplication/Model/SwapHistory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ApiBookingApplication/ApiBookingApplication/Model/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../ApiBookingApplication/ApiBookingApplication/Model/User.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ApiBookingApplication/ApiBookingApplication/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../ApiBookingApplication/ApiBookingApplication/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ApiBookingApplication/ApiBookingApplication/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../ApiBookingApplication/ApiBookingApplication/Properties/launchSettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ApiBookingApplication/ApiBookingApplication/Service/Account/AccountLoginRequest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../ApiBookingApplication/ApiBookingApplication/Service/Account/AccountLoginRequest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ApiBookingApplication/ApiBookingApplication/Service/Account/IAccountService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../ApiBookingApplication/ApiBookingApplication/Service/Account/IAccountService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ApiBookingApplication/ApiBookingApplication/Service/Admin/CRUDRoom/IRoomService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../ApiBookingApplication/ApiBookingApplication/Service/Admin/CRUDRoom/IRoomService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ApiBookingApplication/ApiBookingApplication/Service/Admin/Dashboard/IDashboardService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../ApiBookingApplication/ApiBookingApplication/Service/Admin/Dashboard/IDashboardService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ApiBookingApplication/ApiBookingApplication/appsettings.Development.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../ApiBookingApplication/ApiBookingApplication/appsettings.Development.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ApiBookingApplication/ApiBookingApplication/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../ApiBookingApplication/ApiBookingApplication/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/deploymentTargetSelector.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/deploymentTargetSelector.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/kotlinc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/kotlinc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/migrations.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/migrations.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/other.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/other.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proguard-rules.pro" beforeDir="false" afterPath="$PROJECT_DIR$/proguard-rules.pro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/androidTest/java/com/example/bookingandr/ExampleInstrumentedTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/androidTest/java/com/example/bookingandr/ExampleInstrumentedTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Adapter/AdminRoomTypeAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Adapter/AdminRoomTypeAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Adapter/BookingHistoryAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Adapter/BookingHistoryAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Adapter/ListRoom2Adapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Adapter/ListRoom2Adapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Adapter/ListRoom2AdapterHolder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Adapter/ListRoom2AdapterHolder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Adapter/NewsForAdminAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Adapter/NewsForAdminAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Adapter/NewsforuserAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Adapter/NewsforuserAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Adapter/RoomTypeAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Adapter/RoomTypeAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Adapter/RoomTypeAdapterHolder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Adapter/RoomTypeAdapterHolder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Api/ApiClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Api/ApiClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Api/ApiService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Api/ApiService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Api/DateDeserializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Api/DateDeserializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bookingandr/AddNewsActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bookingandr/AddNewsActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bookingandr/AddTypeRoomActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bookingandr/AddTypeRoomActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bookingandr/AdminDashboardActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bookingandr/AdminDashboardActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bookingandr/CrudNewsFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bookingandr/CrudNewsFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bookingandr/CrudRoomFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bookingandr/CrudRoomFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bookingandr/CrudTypeRoomFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bookingandr/CrudTypeRoomFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bookingandr/CurrentRoom2Activity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bookingandr/CurrentRoom2Activity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bookingandr/DashBoardAdminFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bookingandr/DashBoardAdminFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bookingandr/EditTypeRoomActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bookingandr/EditTypeRoomActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bookingandr/HistoryFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bookingandr/HistoryFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bookingandr/HomeActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bookingandr/HomeActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bookingandr/LoginActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bookingandr/LoginActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bookingandr/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bookingandr/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bookingandr/NewsDetailActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bookingandr/NewsDetailActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bookingandr/NewsFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bookingandr/NewsFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bookingandr/ProfileFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bookingandr/ProfileFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bookingandr/RegisterActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bookingandr/RegisterActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bookingandr/RentRoomActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bookingandr/RentRoomActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bookingandr/RoomFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bookingandr/RoomFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bookingandr/SwapRoomFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bookingandr/SwapRoomFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bookingandr/UpdateNewsActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bookingandr/UpdateNewsActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bookingandr/ViewPagerAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bookingandr/ViewPagerAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bookingandr/ViewPagerAdapterForAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bookingandr/ViewPagerAdapterForAdmin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bookingandr/ViewTypeRoomActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bookingandr/ViewTypeRoomActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/BookingHistoryModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/BookingHistoryModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/BookingRoomResponseModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/BookingRoomResponseModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/DashboardModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/DashboardModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/DashboardResponseModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/DashboardResponseModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/GetCurrenRoomModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/GetCurrenRoomModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/GetListBuilding2ResponseModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/GetListBuilding2ResponseModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/GetListTypeRoomResponseModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/GetListTypeRoomResponseModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/GetStatusCModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/GetStatusCModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/LoginRequestModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/LoginRequestModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/LoginResponseData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/LoginResponseData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/LoginResponseModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/LoginResponseModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/NewsModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/NewsModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/ResponseGetListRoom2Data.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/ResponseGetListRoom2Data.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/ResponseGetListRoom2Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/ResponseGetListRoom2Model.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/RetrofitClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/RetrofitClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/RoomTypePostModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/RoomTypePostModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable/ic_launcher_background.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/drawable/ic_launcher_background.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable/ic_launcher_foreground.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/drawable/ic_launcher_foreground.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable/q.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/drawable/q.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/activity_add_news.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/activity_add_news.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/activity_add_typeroom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/activity_add_typeroom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/activity_admin_dashboard.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/activity_admin_dashboard.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/activity_current_room2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/activity_current_room2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/activity_edit_typeroom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/activity_edit_typeroom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/activity_home.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/activity_home.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/activity_login.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/activity_login.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/activity_news_detail.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/activity_news_detail.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/activity_register.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/activity_register.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/activity_rent_room.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/activity_rent_room.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/activity_update_news.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/activity_update_news.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/activity_view_type_room.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/activity_view_type_room.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/bookinghistory_items.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/bookinghistory_items.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/crud_news_item.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/crud_news_item.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/for_list_typeroom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/for_list_typeroom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/for_list_typeroom_admin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/for_list_typeroom_admin.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/fragment_crud_news.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/fragment_crud_news.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/fragment_crud_room.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/fragment_crud_room.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/fragment_crud_type_room.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/fragment_crud_type_room.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/fragment_dash_board_admin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/fragment_dash_board_admin.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/fragment_history.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/fragment_history.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/fragment_news.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/fragment_news.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/fragment_profile.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/fragment_profile.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/fragment_room.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/fragment_room.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/fragment_swap_room.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/fragment_swap_room.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/layout_for_list_room2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/layout_for_list_room2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/news_item.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/news_item.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/values-night/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/values-night/themes.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/values/colors.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/values/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/values/styles.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/values/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/values/themes.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/xml/backup_rules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/xml/backup_rules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/xml/data_extraction_rules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/xml/data_extraction_rules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/bookingandr/ExampleUnitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/bookingandr/ExampleUnitTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/../build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../gradle.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gradle/libs.versions.toml" beforeDir="false" afterPath="$PROJECT_DIR$/../gradle/libs.versions.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gradlew" beforeDir="false" afterPath="$PROJECT_DIR$/../gradlew" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../gradlew.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/../settings.gradle.kts" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 4
+}]]></component>
+  <component name="ProjectId" id="2ifbU47pOyr6hZfPiCuC8M6QeWA" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "android.gradle.sync.needed": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "git-widget-placeholder": "Develop",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Hi/OneDrive/Documents/GitHub/DormitoryBookingApp/BookingAndroiApp"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e3191315-3d2c-456e-90cd-a7ad9a9e6997" name="Changes" comment="" />
+      <created>1719884590743</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1719884590743</updated>
+    </task>
+    <servers />
+  </component>
+</project>

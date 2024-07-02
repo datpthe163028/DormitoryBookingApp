@@ -83,16 +83,35 @@
         app:layout_constraintTop_toBottomOf="@+id/emailText" />
 
 
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
     <TextView
         android:id="@+id/regis"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="245dp"
+        android:layout_marginTop="176dp"
         android:text="Register new account"
         android:textColor="#FFFFFF"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lgButton" />
+
+    <TextView
+        android:id="@+id/er"
+        android:layout_width="334dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:text="Notif:"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/lgButton" />
 

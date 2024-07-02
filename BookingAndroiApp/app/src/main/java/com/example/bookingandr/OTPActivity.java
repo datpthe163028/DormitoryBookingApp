@@ -21,6 +21,7 @@ import java.util.Date;
 import java.util.Properties;
 import java.util.Random;
 
+<<<<<<< Updated upstream
 import javax.mail.Authenticator;
 import javax.mail.Message;
 import javax.mail.MessagingException;
@@ -30,6 +31,8 @@ import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 
+=======
+>>>>>>> Stashed changes
 import Api.ApiClient;
 import model.LoginRequestModel;
 import model.LoginResponseModel;
@@ -49,7 +52,10 @@ public class OTPActivity extends AppCompatActivity
     public String pwdBuffer;
     public String studentIDBuffer;
     public String phoneBuffer;
+<<<<<<< Updated upstream
     public Date dobBuffer;
+=======
+>>>>>>> Stashed changes
     public boolean genderBuffer;
     public String dobString;
     @Override
@@ -89,6 +95,10 @@ public class OTPActivity extends AppCompatActivity
         });
 
         Button verifyBtn = findViewById(R.id.verifyBtn);
+<<<<<<< Updated upstream
+=======
+        Button BackBtn = findViewById(R.id.BackBtn);
+>>>>>>> Stashed changes
         EditText otpText = findViewById(R.id.otpText);
 
 
@@ -99,7 +109,11 @@ public class OTPActivity extends AppCompatActivity
 
                 if (inputOTP.equals(hiddenOTP)) {
 
+<<<<<<< Updated upstream
                     doRegister(emailBuffer, pwdBuffer, studentIDBuffer, dobBuffer, phoneBuffer, genderBuffer);
+=======
+                    doRegister(emailBuffer, pwdBuffer, studentIDBuffer, phoneBuffer, genderBuffer);
+>>>>>>> Stashed changes
                 }
                 else
                 {
@@ -109,6 +123,18 @@ public class OTPActivity extends AppCompatActivity
             }
         });
 
+<<<<<<< Updated upstream
+=======
+        BackBtn.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(OTPActivity.this, RegisterActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+>>>>>>> Stashed changes
     }
 
 
@@ -136,8 +162,13 @@ public class OTPActivity extends AppCompatActivity
                         OTPResponseModel model = response.body();
                         if(model.status == 200)
                         {
+<<<<<<< Updated upstream
                             Intent intent = new Intent(OTPActivity.this, LoginActivity.class);
                             startActivity(intent);
+=======
+                            TextView OTPDev = findViewById(R.id.er);
+                            OTPDev.setText("Sent a new OTP, try it");
+>>>>>>> Stashed changes
                         }
                         else
                         {
@@ -154,11 +185,19 @@ public class OTPActivity extends AppCompatActivity
     }
 
 
+<<<<<<< Updated upstream
     public void doRegister(String emailInput, String passwordInput, String studentID, Date dob, String phone, boolean gender)
     {
         TextView OTPDev = findViewById(R.id.er);
 
         RegisterRequestModel newUser = new RegisterRequestModel(emailInput, passwordInput, studentID, dob, phone, gender);
+=======
+    public void doRegister(String emailInput, String passwordInput, String studentID, String phone, boolean gender)
+    {
+        TextView OTPDev = findViewById(R.id.er);
+
+        RegisterRequestModel newUser = new RegisterRequestModel(emailInput, passwordInput, studentID, phone, gender);
+>>>>>>> Stashed changes
 
         ApiClient apiClient = new ApiClient();
         apiClient.getApiService().RegisterUser(newUser)
@@ -168,8 +207,14 @@ public class OTPActivity extends AppCompatActivity
                         RegisterResponseModel model = response.body();
                         if(model.status == 200)
                         {
+<<<<<<< Updated upstream
                             OTPDev.setText("success: ");
                             Intent intent = new Intent(OTPActivity.this, LoginActivity.class);
+=======
+                            OTPDev.setText("success!!!");
+                            Intent intent = new Intent(OTPActivity.this, LoginActivity.class);
+                            intent.putExtra("Notif", "Register successfully");
+>>>>>>> Stashed changes
                             startActivity(intent);
                             finish();
                         }

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/edit_room_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Room Name" />
+
+    <EditText
+        android:id="@+id/edit_current_people"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Current People" />
+
+    <EditText
+        android:id="@+id/edit_is_available"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Available" />
+
+    <EditText
+        android:id="@+id/edit_type_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Type ID" />
+
+    <EditText
+        android:id="@+id/edit_building_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Building ID" />
+
+    <EditText
+        android:id="@+id/edit_floor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Floor" />
+
+    <Button
+        android:id="@+id/update_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Update Room" />
+
+</LinearLayout>

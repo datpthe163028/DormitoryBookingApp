@@ -29,8 +29,13 @@ namespace ApiBookingApplication.Model
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
+            var config = new ConfigurationBuilder()
+                    .AddJsonFile("appsettings.json")
+                    .Build();
+
             if (!optionsBuilder.IsConfigured)
             {
+                optionsBuilder.UseSqlServer(config.GetConnectionString("value"));
             }
         }
 

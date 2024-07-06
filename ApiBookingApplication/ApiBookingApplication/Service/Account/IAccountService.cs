@@ -14,6 +14,7 @@ namespace ApiBookingApplication.Service.Account
         Task<(string accessToken, string errorMessage, string role, string userId)> AuthAsync(AccountLoginRequest accountAuthRequest);
         Task<(string errorMessage, string email, string pwd)> Register_Client(AccountRegisterRequest accountAuthRequest);
         Task<(string errorMessage, string Email, string otpSend)> OTP(OTPRequest OTPreq);
+        Task<(string errorMessage, UserDetailResponse userDetail)> UserDetail(string userID);
     }
 
     public class AccountService : IAccountService
@@ -127,5 +128,35 @@ namespace ApiBookingApplication.Service.Account
                 return (ex.Message, "", "");
             }
         }
+        
+        public async Task<(string errorMessage, UserDetailResponse userDetail)> UserDetail(string userID)
+        {
+            try
+            {
+                var user = await _context.Users.FirstOrDefaultAsync(u => u.Id == int.Parse(userID));
+
+                if (user == null)
+                {
+                    return ("User not found", null);
+                }
+
+                var userDetail = new UserDetailResponse
+                {
+                    id = user.Id,
+                    StudentID = user.StudentCode,
+                    Phone = user.PhoneNumber,
+                    Gender = user.Gender,
+                    currentRoomID = user.CurrentRoomId,
+                    Balance = user.Balance
+                };
+
+                return ("", userDetail);
+            }
+            catch (Exception ex)
+            {
+                return (ex.Message, null);
+            }
+        }
+        
     }
 }

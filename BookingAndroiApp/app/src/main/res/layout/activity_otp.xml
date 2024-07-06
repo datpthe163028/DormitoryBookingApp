@@ -13,10 +13,7 @@
         android:layout_width="336dp"
         android:layout_height="33dp"
         android:layout_marginTop="12dp"
-<<<<<<< Updated upstream
-=======
         android:gravity="center"
->>>>>>> Stashed changes
         android:text="Notif: "
         android:textAlignment="center"
         android:textColor="@color/white"
@@ -74,8 +71,6 @@
         app:layout_constraintHorizontal_bias="0.549"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/otpText" />
-<<<<<<< Updated upstream
-=======
 
     <Button
         android:id="@+id/BackBtn"
@@ -86,5 +81,4 @@
         android:text="Back"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
->>>>>>> Stashed changes
 </androidx.constraintlayout.widget.ConstraintLayout>

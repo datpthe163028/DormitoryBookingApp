@@ -64,6 +64,7 @@ dependencies {
     implementation(libs.gson)
     implementation(libs.glide)
     implementation(files("src\\main\\java\\lib\\javax.mail-1.6.2.jar"))
+    implementation(files("src\\main\\java\\lib\\javax.mail-1.6.2.jar"))
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)

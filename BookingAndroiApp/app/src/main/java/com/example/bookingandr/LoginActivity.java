@@ -33,24 +33,18 @@ public class LoginActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_login);
 
-<<<<<<< Updated upstream
-        // Retrieve the values passed from RegisterActivity
-        Intent getintent = getIntent();
-        if (getintent != null) {
-            TextView NotifText = findViewById(R.id.er);
-            notif = getintent.getStringExtra("Notif");
-=======
         // Retrieve the values passed from OTPActivity
         Intent getintent = getIntent();
         if (getintent != null) {
             TextView NotifText = findViewById(R.id.er);
             String notif = getintent.getStringExtra("Notif");
->>>>>>> Stashed changes
             NotifText.setText(notif);
         }
 
+        //Take ID for it
         SharedPreferences sharedPreferences = getSharedPreferences("UserInformation", Context.MODE_PRIVATE);
         String userId = sharedPreferences.getString("UserId", null);
+
 
         if(userId != null && !userId.isEmpty()){
             String role = sharedPreferences.getString("Role", null);
@@ -138,9 +132,6 @@ public class LoginActivity extends AppCompatActivity {
                 }
             }
         });
-
-
-
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());

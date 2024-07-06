@@ -22,17 +22,6 @@ import java.util.Date;
 import java.util.Properties;
 import java.util.Random;
 
-<<<<<<< Updated upstream
-import javax.mail.Message;
-import javax.mail.MessagingException;
-import javax.mail.PasswordAuthentication;
-import javax.mail.Session;
-import javax.mail.Transport;
-import javax.mail.internet.InternetAddress;
-import javax.mail.internet.MimeMessage;
-
-=======
->>>>>>> Stashed changes
 import Api.ApiClient;
 import model.LoginRequestModel;
 import model.LoginResponseModel;
@@ -50,13 +39,8 @@ public class RegisterActivity extends AppCompatActivity
     public String pwdBuffer;
     public String StudentIDBuffer;
     public String phoneBuffer;
-<<<<<<< Updated upstream
-    public Date DobBuffer;
     public boolean genderBuffer;
-    public String dobInput;
-=======
-    public boolean genderBuffer;
->>>>>>> Stashed changes
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -115,8 +99,6 @@ public class RegisterActivity extends AppCompatActivity
             }
         });
 
-<<<<<<< Updated upstream
-=======
         Button BackBtn = findViewById(R.id.BackBtn);
         BackBtn.setOnClickListener(new View.OnClickListener()
         {
@@ -128,7 +110,6 @@ public class RegisterActivity extends AppCompatActivity
                 finish();
             }
         });
->>>>>>> Stashed changes
     }
 
 
@@ -162,13 +143,8 @@ public class RegisterActivity extends AppCompatActivity
                             intent.putExtra("Gender", String.valueOf(genderBuffer));
 
                             intent.putExtra("hiddenOTP", hiddenOTP);
-<<<<<<< Updated upstream
-                            intent.putExtra("DOB", dobInput);
-                            startActivity(intent);
-=======
                             startActivity(intent);
                             finish();
->>>>>>> Stashed changes
                         }
                         else
                         {

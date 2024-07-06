@@ -5,5 +5,3 @@ public class LoginResponseModel {
     public String message;
     public LoginResponseData data;
 }
-
-

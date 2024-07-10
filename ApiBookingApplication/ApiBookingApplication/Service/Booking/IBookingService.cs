@@ -30,10 +30,11 @@ namespace ApiBookingApplication.Service.Account
 
         public async Task<(string errorMessage, string id, string BookingID)> Add(BookingRequest bookingRequest)
         {
-            //De san cho roi nha, thich nha :))
+            //De san cho roi, thich nha :))
             return ("", bookingRequest.ID, bookingRequest.roomID);
         }
 
+        //them request
         public async Task<(string errorMessage, string? UserIDReq, string? UserIDTarget)> SwapReq(SwapBookingRequest bookingRequest)
         {
             var userReq = _context.Users.FirstOrDefault(u => u.StudentCode == bookingRequest.UserIDReq);
@@ -60,6 +61,7 @@ namespace ApiBookingApplication.Service.Account
             return ("", bookingRequest.UserIDReq, bookingRequest.UserIDTarget);
         }
 
+        //doi booking
         public async Task<(string errorMessage, int? UserIDReq, int? UserIDTarget)> Swap(SwapBooking bookingRequest)
         {
             var userReq = _context.Users.FirstOrDefault(u => u.Id == bookingRequest.UserIDReq);
@@ -96,5 +98,7 @@ namespace ApiBookingApplication.Service.Account
 
             return ("Student codes do not match", null, null);
         }
+
+
     }
 }

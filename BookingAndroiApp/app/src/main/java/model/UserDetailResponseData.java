@@ -2,9 +2,9 @@ package model;
 
 public class UserDetailResponseData {
     public int ID;
-    public String StudentID;
-    public String Phone;
-    public boolean Gender;
+    public String studentID;
+    public String phone;
+    public boolean gender;
     public int currentRoomID;
-    public double Balance;
+    public double balance;
 }

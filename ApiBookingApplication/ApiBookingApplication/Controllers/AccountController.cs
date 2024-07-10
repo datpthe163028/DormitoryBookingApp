@@ -54,19 +54,6 @@ namespace ApiBookingApplication.Controllers
             }
             return Ok(new ResponseBaseModel() { Data = new { email = otpReq.email, otp = otpReq.otp }, Message = "OTP sent: " + Email, Status = 200 });
         }
-
-        /*
-        [HttpPost("Detail")]
-        public async Task<IActionResult> UserDetail([FromBody] string ID)
-        {
-            (string errorMessage, UserDetailResponse userDetail) = await _accountService.UserDetail(ID);
-            if (!string.IsNullOrEmpty(errorMessage))
-            {
-                return Ok(new ResponseBaseModel() { Data = null, Message = "Failed to Find User ID", Status = 400 });
-            }
-            return Ok(new ResponseBaseModel() { Data = userDetail, Message = "User details retrieved successfully", Status = 200 });
-        }
-        */
         
         [HttpPost("Detail")]
         public async Task<IActionResult> UserDetail([FromBody] string ID)

@@ -12,8 +12,6 @@ import android.widget.TextView;
 import androidx.fragment.app.Fragment;
 
 import Api.ApiClient;
-import model.OTPRequestModel;
-import model.OTPResponseModel;
 import model.UserDetailResponseModel;
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -68,12 +66,11 @@ public class ProfileFragment extends Fragment {
                             UserDetailResponseModel userDetail = response.body();
                             // Populate the UI with user details
                             textViewUserId.setText("User ID: " + userID);
-                            //textViewStudentID.setText("Student ID: " + userDetail.StudentID);
-                            textViewStudentID.setText("Test ID: " + response.body());
-                            textViewPhone.setText("Phone: " + userDetail.data.Phone);
-                            textViewGender.setText("Gender: " + (userDetail.data.Gender ? "Male" : "Female"));
+                            textViewStudentID.setText("Student ID: " + userDetail.data.studentID);
+                            textViewPhone.setText("Phone: " + userDetail.data.phone);
+                            textViewGender.setText("Gender: " + (userDetail.data.gender ? "Male" : "Female"));
                             textViewCurrentRoomID.setText("Current Room ID: " + userDetail.data.currentRoomID);
-                            textViewBalance.setText("Balance: " + userDetail.data.Balance);
+                            textViewBalance.setText("Balance: " + userDetail.data.balance);
                         } else {
                             // Handle API response status other than 200
                         }

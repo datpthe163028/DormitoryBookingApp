@@ -1,6 +1,7 @@
 package com.example.bookingandr;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.Button;
@@ -103,7 +104,9 @@ public class UpdateNewsActivity extends AppCompatActivity {
             public void onResponse(Call<Void> call, Response<Void> response) {
                 if (response.isSuccessful()) {
                     Toast.makeText(UpdateNewsActivity.this, "News updated successfully", Toast.LENGTH_SHORT).show();
-                    finish(); // Close activity after successful update
+                    Intent resultIntent = new Intent();
+                    setResult(RESULT_OK, resultIntent);
+                    finish();// Close activity after successful update
                 } else {
                     Toast.makeText(UpdateNewsActivity.this, "Failed to update news", Toast.LENGTH_SHORT).show();
                 }

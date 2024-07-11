@@ -1,5 +1,8 @@
 package com.example.bookingandr;
 
+import static Adapter.NewsForAdminAdapter.EDIT_News_REQUEST_CODE;
+
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -20,7 +23,6 @@ import com.google.gson.Gson;
 import java.util.List;
 
 import Adapter.NewsForAdminAdapter;
-import Adapter.NewsforuserAdapter;
 import Api.ApiClient;
 import model.NewsModel;
 import retrofit2.Call;
@@ -35,6 +37,7 @@ import retrofit2.Response;
 public class CrudNewsFragment extends Fragment {
     private RecyclerView recyclerView;
     private NewsForAdminAdapter bhAdapter;
+    public static final int ADD_NEWS_REQUEST_CODE = 2;
 
     public CrudNewsFragment() {
         // Required empty public constructor
@@ -66,7 +69,7 @@ public class CrudNewsFragment extends Fragment {
         ImageView addButton = view.findViewById(R.id.addButton);
         addButton.setOnClickListener(v -> {
             Intent intent = new Intent(getActivity(), AddNewsActivity.class);
-            startActivity(intent);
+            startActivityForResult(intent, ADD_NEWS_REQUEST_CODE);
         });
 
         return view;
@@ -79,41 +82,36 @@ public class CrudNewsFragment extends Fragment {
         recyclerView = view.findViewById(R.id.recyclerCRUDNews);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new GridLayoutManager(getContext(), 1));
+        refreshNewsList();
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if ((requestCode == EDIT_News_REQUEST_CODE || requestCode == ADD_NEWS_REQUEST_CODE) && resultCode == Activity.RESULT_OK) {
+            // Refresh the news list
+            refreshNewsList();
+        }
+    }
+
+    private void refreshNewsList() {
         ApiClient apiClient = new ApiClient();
         apiClient.getApiService().getNews().enqueue(new Callback<List<NewsModel>>() {
             @Override
             public void onResponse(Call<List<NewsModel>> call, Response<List<NewsModel>> response) {
                 if (response.isSuccessful() && response.body() != null) {
                     List<NewsModel> model = response.body();
-
-                    // Log the list size
-                    Log.d("duong", "Received " + model.size() + " news items.");
-
-                    // Log each item in the list
-                    for (NewsModel news : model) {
-                        Log.d("duong", "News item: " + news.toString());
-                        // Or you can log specific fields
-                        Log.d("duong", "Title: " + news.getHeader());
-                        Log.d("duong", "JSON Response: " + new Gson().toJson(response.body()));
-
-                        // Log.d("NewsFragment", "Description: " + news.getDescription());
-                        // etc.
-                    }
-
-                    bhAdapter = new NewsForAdminAdapter(getContext(), model);
-                   recyclerView.setAdapter(bhAdapter);
+                    bhAdapter = new NewsForAdminAdapter(getContext(), model, CrudNewsFragment.this);
+                    recyclerView.setAdapter(bhAdapter);
                 } else {
                     Log.e("duong", "Response unsuccessful");
                 }
             }
-
 
             @Override
             public void onFailure(Call<List<NewsModel>> call, Throwable throwable) {
                 Log.e("duong", "loi j vay");
             }
         });
-
-
     }
 }

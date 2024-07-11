@@ -1,5 +1,6 @@
 package com.example.bookingandr;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -71,6 +72,7 @@ public class AddNewsActivity extends AppCompatActivity {
             public void onResponse(Call<NewsModel> call, Response<NewsModel> response) {
                 if (response.isSuccessful()) {
                     Toast.makeText(AddNewsActivity.this, "News added successfully", Toast.LENGTH_SHORT).show();
+                    setResult(Activity.RESULT_OK);
                     finish();
                 } else {
                     Toast.makeText(AddNewsActivity.this, "Failed to add news", Toast.LENGTH_SHORT).show();

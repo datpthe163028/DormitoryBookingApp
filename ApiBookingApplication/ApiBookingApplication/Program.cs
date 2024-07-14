@@ -56,6 +56,7 @@ builder.Services.AddAuthentication(options =>
     };
 });
 builder.Services.AddTransient<IAccountService, AccountService>();
+builder.Services.AddTransient<IBookingService, BookingService>();
 builder.Services.AddTransient<IDashboardService, DashboardService>();
 builder.Services.AddTransient<IRoomService, RoomService>();
 builder.Services.AddAutoMapper(typeof(MappingProfile));

@@ -40,11 +40,11 @@ namespace ApiBookingApplication.Controllers.Admin.CRUDRoom
                 }
             }
 
-            return Ok(new ResponseBaseModel() 
-            { 
+            return Ok(new ResponseBaseModel()
+            {
                 Data = listDtos,
                 Message = message,
-                Status = 200 
+                Status = 200
             });
         }
         [HttpGet("{id}")]
@@ -139,7 +139,7 @@ namespace ApiBookingApplication.Controllers.Admin.CRUDRoom
             if (building == null) return NotFound("Building does not exist");
             var type = await _roomService.GetRoomTypeById(dto.TypeId ?? 0);
             if (type == null) return NotFound("Room type does not exist");
-            
+
             room.Name = dto.Name;
             room.CurrentPeople = dto.CurrentPeople;
             room.IsAvailble = dto.IsAvailble;

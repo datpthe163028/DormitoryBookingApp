@@ -12,10 +12,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.cardview.widget.CardView;
+import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.bookingandr.NewsDetailActivity;
 import com.example.bookingandr.R;
 import com.example.bookingandr.UpdateNewsActivity;
 
@@ -35,12 +34,13 @@ public class NewsForAdminAdapter extends  RecyclerView.Adapter<NewsForAdminAdapt
 
     private Context context;
     private List<NewsModel> newslist;
+    private Fragment fragment;
+    public static final int EDIT_News_REQUEST_CODE = 1;
 
-
-    public NewsForAdminAdapter( Context context,List<NewsModel> newslist) {
+    public NewsForAdminAdapter( Context context,List<NewsModel> newslist,Fragment fragment) {
         this.context = context;
         this.newslist = newslist;
-
+        this.fragment = fragment;
     }
 
     @NonNull
@@ -77,7 +77,7 @@ public class NewsForAdminAdapter extends  RecyclerView.Adapter<NewsForAdminAdapt
                 // Start UpdateNewsActivity with an intent
                 Intent intent = new Intent(context, UpdateNewsActivity.class);
                 intent.putExtra("newsId", nl.getId()); // Pass the news ID to the activity
-                context.startActivity(intent);
+                fragment.startActivityForResult(intent, EDIT_News_REQUEST_CODE); //
             }
         });
 

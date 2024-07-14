@@ -1,12 +1,10 @@
 package com.example.bookingandr;
 
-import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
-import android.content.Context;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -26,14 +24,25 @@ import retrofit2.Response;
 
 public class LoginActivity extends AppCompatActivity {
 
+    public String notif;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_login);
 
+        // Retrieve the values passed from OTPActivity
+        Intent getintent = getIntent();
+        if (getintent != null) {
+            TextView NotifText = findViewById(R.id.er);
+            String notif = getintent.getStringExtra("Notif");
+            NotifText.setText(notif);
+        }
+
+        //Take ID for it
         SharedPreferences sharedPreferences = getSharedPreferences("UserInformation", Context.MODE_PRIVATE);
         String userId = sharedPreferences.getString("UserId", null);
+
 
         if(userId != null && !userId.isEmpty()){
             String role = sharedPreferences.getString("Role", null);
@@ -121,9 +130,6 @@ public class LoginActivity extends AppCompatActivity {
                 }
             }
         });
-
-
-
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());

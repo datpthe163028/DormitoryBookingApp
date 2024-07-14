@@ -10,8 +10,13 @@ import model.GetListTypeRoomResponseModel;
 import model.GetStatusCModel;
 import model.LoginRequestModel;
 import model.LoginResponseModel;
+import model.OTPRequestModel;
+import model.OTPResponseModel;
+import model.RegisterRequestModel;
+import model.RegisterResponseModel;
 import model.ResponseGetListRoom2Model;
 import model.RoomTypePostModel;
+import model.UserDetailResponseModel;
 import okhttp3.MultipartBody;
 import okhttp3.RequestBody;
 import model.NewsModel;
@@ -90,5 +95,15 @@ public interface ApiService {
 
     @GET("api/Dashboard/GetDashboard")
     Call<DashboardResponseModel> getDashboard();
+
+    //Register OTP
+    @POST("api/Account/Register")
+    Call<RegisterResponseModel> RegisterUser(@Body RegisterRequestModel loginRequest);
+    @POST("api/Account/OTP")
+    Call<OTPResponseModel> SendOTP(@Body OTPRequestModel OTPReq);
+
+    //Profile
+    @POST("api/Account/Detail")
+    Call<UserDetailResponseModel> userDetail(@Body String userID);
 }
 

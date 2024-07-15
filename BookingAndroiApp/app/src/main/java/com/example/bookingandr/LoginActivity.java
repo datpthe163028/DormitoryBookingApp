@@ -1,0 +1,155 @@
+package com.example.bookingandr;
+
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.os.Bundle;
+import android.text.InputType;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+
+import androidx.activity.EdgeToEdge;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
+
+import Api.ApiClient;
+import model.LoginRequestModel;
+import model.LoginResponseModel;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+
+public class LoginActivity extends AppCompatActivity {
+
+    private boolean isPasswordVisible = false;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        EdgeToEdge.enable(this);
+        setContentView(R.layout.activity_login);
+
+        // Retrieve the values passed from OTPActivity
+        Intent getintent = getIntent();
+        if (getintent != null) {
+            TextView NotifText = findViewById(R.id.er);
+            String notif = getintent.getStringExtra("Notif");
+            NotifText.setText(notif);
+        }
+
+        //Take ID for it
+        SharedPreferences sharedPreferences = getSharedPreferences("UserInformation", Context.MODE_PRIVATE);
+        String userId = sharedPreferences.getString("UserId", null);
+
+        if(userId != null && !userId.isEmpty()){
+            String role = sharedPreferences.getString("Role", null);
+
+            if(role.equals("Admin")){
+                Intent intent = new Intent(LoginActivity.this, AdminDashboardActivity.class);
+                startActivity(intent);
+                finish();
+            }else{
+                Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        }
+
+        TextView register = findViewById(R.id.regis);
+        register.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        EditText passwordEditText = findViewById(R.id.passwordText);
+        Button showHidePasswordButton = findViewById(R.id.showHidePasswordButton);
+
+        showHidePasswordButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (isPasswordVisible) {
+                    passwordEditText.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
+                    showHidePasswordButton.setText("Show");
+                } else {
+                    passwordEditText.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+                    showHidePasswordButton.setText("Hide");
+                }
+                passwordEditText.setSelection(passwordEditText.getText().length());
+                isPasswordVisible = !isPasswordVisible;
+            }
+        });
+
+        Button loginBtn = findViewById(R.id.lgButton);
+        loginBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int check = 0;
+                EditText email = findViewById(R.id.emailText);
+                TextView emailError = findViewById(R.id.er1);
+                TextView passwordError = findViewById(R.id.er2);
+
+                String emailInput = email.getText().toString();
+                String passwordInput = passwordEditText.getText().toString();
+                emailError.setText("");
+                passwordError.setText("");
+                if (emailInput.isEmpty() || !emailInput.contains("@")) {
+                    check = 1;
+                    emailError.setText("Enter email");
+                }
+
+                if (passwordInput.isEmpty()) {
+                    check = 1;
+                    passwordError.setText("Enter password");
+                }
+
+                if(check == 0){
+                    ApiClient apiClient = new ApiClient();
+                    apiClient.getApiService().loginUser(new LoginRequestModel(emailInput, passwordInput))
+                            .enqueue(new Callback<LoginResponseModel>() {
+                                @Override
+                                public void onResponse(Call<LoginResponseModel> call, Response<LoginResponseModel> response) {
+                                    LoginResponseModel model = response.body();
+                                    if(model.status == 200){
+                                        SharedPreferences sharedPref = getSharedPreferences("UserInformation", Context.MODE_PRIVATE);
+                                        SharedPreferences.Editor editor = sharedPref.edit();
+                                        editor.putString("UserId", model.data.userId);
+                                        editor.putString("Role", model.data.role);
+                                        editor.putString("accessToken", model.data.token);
+                                        editor.apply();
+
+                                        if(model.data.role.equals("Admin")){
+                                            Intent intent = new Intent(LoginActivity.this, AdminDashboardActivity.class);
+                                            startActivity(intent);
+                                            finish();
+                                        }else{
+                                            Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
+                                            startActivity(intent);
+                                            finish();
+                                        }
+                                    }else {
+                                        passwordError.setText(model.message);
+                                    }
+                                }
+                                @Override
+                                public void onFailure(Call<LoginResponseModel> call, Throwable throwable) {
+                                    passwordError.setText("Api error");
+                                }
+                            });
+                }
+            }
+        });
+
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
+            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
+            return insets;
+        });
+    }
+}

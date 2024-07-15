@@ -19,10 +19,8 @@ public class ViewPagerAdapter extends FragmentStatePagerAdapter {
             case 1:
                 return new HistoryFragment();
             case 2:
-                return new SwapRoomFragment();
-            case 3:
                 return new NewsFragment();
-            case 4:
+            case 3:
                 return new ProfileFragment();
 
             default:
@@ -38,10 +36,8 @@ public class ViewPagerAdapter extends FragmentStatePagerAdapter {
             case 1:
                 return "History";
             case 2:
-                return "Swap room";
-            case 3:
                 return "News";
-            case 4:
+            case 3:
                 return "Profile";
             default:
                 return null;
@@ -50,6 +46,6 @@ public class ViewPagerAdapter extends FragmentStatePagerAdapter {
 
     @Override
     public int getCount() {
-        return 5;
+        return 4;
     }
 }

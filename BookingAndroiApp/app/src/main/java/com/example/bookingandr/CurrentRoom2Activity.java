@@ -43,7 +43,7 @@ public class CurrentRoom2Activity extends AppCompatActivity {
         String building = getIntent().getStringExtra("BUILDING");
         TextView t1 = findViewById(R.id.textView5);
         TextView t2 = findViewById(R.id.textView6);
-        t1.setText("Hiện tại bạn đang ở phòng " + room);
+        t1.setText("Current room:  " + room);
         t2.setText(building);
 
 
